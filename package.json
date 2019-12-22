@@ -1,0 +1,25 @@
+{
+  "name": "micro-pdf",
+  "version": "0.1.0",
+  "description": "Node Micro-service to convert HTML into PDFs :page_facing_up:",
+  "main": "index.js",
+  "scripts": {
+    "start": "micro -l tcp://0.0.0.0:${PORT}",
+    "dev": "PORT=3001 npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vigzmv/micro-pdf.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vigzmv/micro-pdf/issues"
+  },
+  "homepage": "https://github.com/vigzmv/micro-pdf#readme",
+  "dependencies": {
+    "micro": "^9.3.4",
+    "puppeteer": "^2.0.0"
+  }
+}
