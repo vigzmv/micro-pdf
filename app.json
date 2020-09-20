@@ -1,0 +1,12 @@
+{
+  "name": "micro-pdf",
+  "description": "Node Micro-service to convert HTML into PDFs",
+  "repository": "https://github.com/vigzmv/micro-pdf",
+  "keywords": ["node", "pdf", "micro"],
+  "image": "heroku/node",
+  "buildpacks": [
+    {
+      "url": "https://github.com/jontewks/puppeteer-heroku-buildpack.git"
+    }
+  ]
+}

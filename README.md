@@ -4,6 +4,8 @@ Node Micro-service to convert HTML into PDFs :page_facing_up:
 
 Uses [Puppeteer](https://github.com/puppeteer/puppeteer) to render the page with a real chrome headless browser and prints it to PDF. Uses real chrome browser so what you see on your browser is what you get. This makes development much easier.
 
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/vigzmv/micro-pdf)
+
 ## Server Side
 
 Can be hosted on any provider with node runtime support.
