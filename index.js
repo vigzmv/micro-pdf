@@ -8,8 +8,8 @@ const puppeteerLaunchOptions = {
     "--disable-dev-shm-usage",
     "--disable-accelerated-2d-canvas",
     "--disable-gpu",
-    "--window-size=1366x768"
-  ]
+    "--window-size=1366x768",
+  ],
 };
 
 class PuppeteerService {
@@ -36,16 +36,17 @@ module.exports = async (req, res) => {
   const { html, format = "A$" } = await json(req);
   const page = await puppeteerService.newPage();
 
-  page.setJavaScriptEnabled(false); // Enable if javascript is needed to
+  page.setJavaScriptEnabled(false); // Enable if javascript is needed
 
   await page.setContent(html, {
-    waitUntil: "networkidle0" // wait until images and css are loaded
+    waitUntil: "networkidle0", // wait until images and css are loaded
   });
 
   const pdf = await page.pdf({
     format: "A4",
-    printBackground: true
+    printBackground: true,
   });
+
   page.close();
 
   const filename = `filename=Example.pdf`;
@@ -54,5 +55,5 @@ module.exports = async (req, res) => {
   res.setHeader("Content-Type", "application/pdf");
 
   console.log("PDF Created");
-  send(res, 200, pdf);
+  return send(res, 200, pdf);
 };

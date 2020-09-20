@@ -20,6 +20,6 @@
   "homepage": "https://github.com/vigzmv/micro-pdf#readme",
   "dependencies": {
     "micro": "^9.3.4",
-    "puppeteer": "^2.0.0"
+    "puppeteer": "^2.1.1"
   }
 }
